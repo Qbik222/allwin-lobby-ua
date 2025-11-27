@@ -104,6 +104,7 @@ body
       position: relative
       top: 20px
       z-index: 2
+      animation: levitate-cup 6s ease-in-out infinite
 
     &-card, &-ball, &-cube, &-ball-top
       position: absolute
@@ -112,21 +113,25 @@ body
       transform: rotate(-24.254deg)
       left: 0
       top: 40px
+      animation: levitate-card 5.5s ease-in-out infinite
     &-ball
       max-width: 147px
       transform: rotate(139.843deg)
       right: 0
       bottom: 0
+      animation: levitate-ball 6.5s ease-in-out infinite
     &-cube
       max-width: 210px
       transform: rotate(137deg)
       top: -250px
       left: -90px
+      animation: levitate-cube 7s ease-in-out infinite
     &-ball-top
       max-width: 112px
       transform: rotate(44.854deg)
       top: -150px
       right: -60px
+      animation: levitate-ball-top 3.8s ease-in-out infinite
 
 
   &__bonus
@@ -137,6 +142,7 @@ body
     align-items: center
     &-img
       max-width: 120px
+      animation: levitate-bonus-img 6s ease-in-out infinite
     &-text
       margin-top: 10px
       color: $white
@@ -260,16 +266,23 @@ body
       .info__img
         &-left
           transform: rotate(-2.493deg)
+          animation: levitate-info-img-1-left 5s ease-in-out infinite
+        &-center
+          animation: levitate-info-img-1-center 6.2s ease-in-out infinite
         &-right
           transform: rotate(32.281deg)
+          animation: levitate-info-img-1-right 6s ease-in-out infinite
     &:nth-child(2)
       .info__img
         &-left
           transform: rotate(120deg)
+          animation: levitate-info-img-2-left 5.5s ease-in-out infinite
         &-center
           transform: rotate(17.097deg)
+          animation: levitate-info-img-2-center 6.5s ease-in-out infinite
         &-right
           transform: rotate(11.283deg)
+          animation: levitate-info-img-2-right 5.8s ease-in-out infinite
   &__img
     &-left, &-center, &-right
       position: absolute
@@ -402,6 +415,102 @@ body
     border-radius: 50%
     display: inline-block
     margin: 0 8px 3px 0
+
+@keyframes levitate-cup
+  0%, 100%
+    transform: rotate(20.466deg) translateY(0)
+  50%
+    transform: rotate(20.466deg) translateY(-15px)
+
+@keyframes levitate-card
+  0%, 100%
+    transform: rotate(-24.254deg) translateY(0)
+  50%
+    transform: rotate(-24.254deg) translateY(-15px)
+
+@keyframes levitate-ball
+  0%, 100%
+    transform: rotate(139.843deg) translateY(0)
+  50%
+    transform: rotate(139.843deg) translateY(-15px)
+
+@keyframes levitate-cube
+  0%, 100%
+    transform: rotate(137deg) translateY(0)
+  50%
+    transform: rotate(137deg) translateY(-15px)
+
+@keyframes levitate-ball-top
+  0%, 100%
+    transform: rotate(44.854deg) translateY(0)
+  50%
+    transform: rotate(44.854deg) translateY(-15px)
+
+@keyframes levitate-bonus-img
+  0%, 100%
+    transform: translateY(0)
+  50%
+    transform: translateY(-12px)
+
+@keyframes levitate-info-img-1-left
+  0%, 100%
+    transform: rotate(-2.493deg) translateY(0)
+  50%
+    transform: rotate(-2.493deg) translateY(-12px)
+
+@keyframes levitate-info-img-1-center
+  0%, 100%
+    transform: translateY(0)
+  50%
+    transform: translateY(-12px)
+
+@keyframes levitate-info-img-1-right
+  0%, 100%
+    transform: rotate(32.281deg) translateY(0)
+  50%
+    transform: rotate(32.281deg) translateY(-12px)
+
+@keyframes levitate-info-img-2-left
+  0%, 100%
+    transform: rotate(120deg) translateY(0)
+  50%
+    transform: rotate(120deg) translateY(-12px)
+
+@keyframes levitate-info-img-2-center
+  0%, 100%
+    transform: rotate(17.097deg) translateY(0)
+  50%
+    transform: rotate(17.097deg) translateY(-12px)
+
+@keyframes levitate-info-img-2-right
+  0%, 100%
+    transform: rotate(11.283deg) translateY(0)
+  50%
+    transform: rotate(11.283deg) translateY(-12px)
+
+@keyframes levitate-info-img-1-center-media
+  0%, 100%
+    transform: rotate(10deg) translateY(0)
+  50%
+    transform: rotate(10deg) translateY(-12px)
+
+@keyframes levitate-info-img-2-left-media
+  0%, 100%
+    transform: rotate(90deg) translateY(0)
+  50%
+    transform: rotate(90deg) translateY(-12px)
+
+@keyframes levitate-info-img-2-center-media
+  0%, 100%
+    transform: scale(-1, 1) translateY(0)
+  50%
+    transform: scale(-1, 1) translateY(-12px)
+
+@keyframes levitate-info-img-2-right-media
+  0%, 100%
+    transform: rotate(27.916deg) translateY(0)
+  50%
+    transform: rotate(27.916deg) translateY(-12px)
 
 @media screen and (max-width: 600px)
   .circle
