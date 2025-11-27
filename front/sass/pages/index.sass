@@ -14,14 +14,337 @@ body
   & > *
     font-family: inherit
 
-.fav-page
+.btn
+  font-family: $font-exo2-semibold
+  font-size: 18px
+  background: $btn
+  padding: 14px 20px
+  text-transform: uppercase
+  transition: all .4s ease-in-out
+  color: #090A18
+  border-radius: 6px
+  display: inline-block
+  &:hover
+    cursor: pointer
+    background: $btnHover
+
+.allwin-page
   background: $blue
   display: flex
   flex-direction: column
   align-items: center
   overflow: hidden
 
+.welcome
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  padding-top: 115px
+  background: url("../img/welcome/bg.png") no-repeat 0 0/cover
+  background-size: 100% 100%
+  min-width: 1366px
+  max-width: 1366px
+  &__btn
+    margin-top: 30px
+  &__title
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    &-top
+      font-family: $font-allwin-display-condensed-bold
+      font-size: 60px
+      line-height: 60px
+      color: $grey
+      display: flex
+      align-items: center
+      padding-left: 15px
+      &::after
+        content: "*"
+        font-family: $font-allwin-display-condensed-bold
+        color: $grey
+        font-size: 28px
+        line-height: 28px
+        margin: 5px 0 auto 5px
+    &-bottom
+      font-family: $font-allwin-display-condensed-medium
+      font-size: 49px
+      color: $grey
+  &__info
+    display: flex
+    align-items: center
+    justify-content: center
+    min-width: 768px
+    max-width: 768px
+    &-center
+      position: relative
+      width: 320px
+      display: flex
+      align-items: flex-end
+      justify-content: center
+      z-index: 0
+      &::before
+        content: ""
+        min-width: 885px
+        max-width: 885px
+        height: 885px
+        position: absolute
+        z-index: 0
+        pointer-events: none
+        left: 48%
+        top: 26%
+        transform: translate(-50%, -50%)
+        background: url("../img/welcome/grad.png") no-repeat 0 0/cover
+        background-size: 100% 100%
+    &-left, &-right
+      z-index: 1
+    &-cup
+      max-width: 185px
+      transform: rotate(20.466deg)
+      position: relative
+      top: 20px
+      z-index: 2
 
+    &-card, &-ball, &-cube, &-ball-top
+      position: absolute
+    &-card
+      max-width: 92px
+      transform: rotate(-24.254deg)
+      left: 0
+      top: 40px
+    &-ball
+      max-width: 147px
+      transform: rotate(139.843deg)
+      right: 0
+      bottom: 0
+    &-cube
+      max-width: 210px
+      transform: rotate(137deg)
+      top: -250px
+      left: -90px
+    &-ball-top
+      max-width: 112px
+      transform: rotate(44.854deg)
+      top: -150px
+      right: -60px
+
+
+  &__bonus
+    width: 240px
+    height: 300px
+    display: flex
+    flex-direction: column
+    align-items: center
+    &-img
+      max-width: 120px
+    &-text
+      margin-top: 10px
+      color: $white
+      font-family: $font-allwin-display-normal-bold
+      font-size: 28px
+      text-transform: uppercase
+    &-amount
+      background: #3396D3
+      border-radius: 8px
+      width: 100%
+      display: flex
+      align-items: flex-end
+      justify-content: center
+      padding: 9px 10px 7px 10px
+      gap: 8px
+      margin-top: 15px
+      &-item
+        color: $white
+        font-family: $font-allwin-text-bold
+        &:nth-child(1)
+          text-transform: lowercase
+          font-size: 27px
+          line-height: 27px
+        &:nth-child(2)
+          text-transform: uppercase
+          font-size: 34px
+          line-height: 34px
+  &__bottom
+    color: $white
+    font-family: $font-allwin-text-bold
+    font-size: 32px
+    margin-top: 15px
+    display: flex
+    align-items: center
+    &::before
+      content: ""
+      display: block
+      width: 24px
+      height: 24px
+      margin-right: 9px
+      background: url("../img/welcome/plus.png") no-repeat 0 0/contain
+
+
+.cards
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-wrap: wrap
+  gap: 18px
+  padding: 40px 10px 0 10px
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 212px
+    height: 141px
+    gap: 5px
+    background: url("../img/cards/bg.png") no-repeat 0 0/cover
+    background-size: 100% 100%
+    transition: all .3s ease-in-out
+    &:hover
+      transform: translate(2px, -4px)
+    &-icon
+      max-width: 40px
+    &-text
+      font-size: 24px
+      line-height: 37px
+      color: $white
+      text-transform: uppercase
+      font-family: $font-allwin-display-normal-medium
+
+
+.info
+  max-width: 1366px
+  min-width: 1366px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding-top: 60px
+  &__btn
+    margin-top: 20px
+  &__item
+    max-width: 650px
+    min-width: 650px
+    height: 332px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0 30px 0 60px
+    &:nth-child(1)
+      background: url("../img/info/left-bg.png") no-repeat 0 0/cover
+      background-size: 100% 100%
+      @media screen and (max-width: 1400px)
+        background: url("../img/info/left-bg-tab.png") no-repeat 0 0/cover
+        background-size: 100% 100%
+    &:nth-child(2)
+      background: url("../img/info/right-bg.png") no-repeat 0 0/cover
+      background-size: 100% 100%
+      @media screen and (max-width: 1400px)
+        background: url("../img/info/right-bg-tab.png") no-repeat 0 0/cover
+        background-size: 100% 100%
+    &-title
+      color: $white
+      font-size: 40px
+      font-family: $font-allwin-display-normal-medium
+    &-text
+      margin-top: 10px
+      color: $white
+      font-family: $font-exo2-regular
+      font-size: 17px
+    &-left
+      height: 100%
+      padding-top: 60px
+    &-right
+      min-width: 280px
+      max-width: 280px
+      height: 320px
+      position: relative
+    &:nth-child(1)
+      .info__img
+        &-left
+          transform: rotate(-2.493deg)
+        &-right
+          transform: rotate(32.281deg)
+    &:nth-child(2)
+      .info__img
+        &-left
+          transform: rotate(120deg)
+        &-center
+          transform: rotate(17.097deg)
+        &-right
+          transform: rotate(11.283deg)
+  &__img
+    &-left, &-center, &-right
+      position: absolute
+    &-left
+      max-width: 90px
+      left: 0
+      top: 0
+    &-center
+      max-width: 200px
+      right: 0
+      top: 40px
+    &-right
+      max-width: 120px
+      bottom: 0
+      right: 10px
+
+.seo
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  padding: 50px 0
+  max-width: 1160px
+  min-width: 1160px
+  //max-height: 285px
+  &__left
+    max-width: 470px
+    min-width: 470px
+    max-height: 285px
+    padding: 12px 10px 10px 10px
+    overflow: auto
+    scrollbar-width: auto
+    &::-webkit-scrollbar
+      width: 1px
+      background: $white
+    &::-webkit-scrollbar-thumb
+      background: $btn
+      width: 1px
+    &-title
+      font-size: 18px
+      font-family: $font-exo2-semibold
+      color: $white
+      text-transform: uppercase
+      &:not(:first-child)
+        margin-top: 15px
+    &-text
+      margin-top: 10px
+      font-family: $font-exo2-regular
+      color: $white
+      font-size: 14px
+
+  &__right
+    max-width: 580px
+    min-width: 580px
+    height: 285px
+    &-row
+      display: flex
+      width: 100%
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+      padding: 12px 0
+      &:last-child
+        border-bottom: none
+    &-label
+      font-family: $font-exo2-semibold
+      font-weight: bold
+      color: $white
+      font-size: 14px
+      line-height: 20px
+      min-width: 210px
+      flex-shrink: 0
+    &-value
+      font-family: $font-exo2-regular
+      color: $white
+      font-size: 14px
+      line-height: 20px
+      flex: 1
 
 // loader
 
@@ -48,186 +371,13 @@ body
   overflow: hidden
 
 
-.table
-  display: flex
-  flex-direction: column
-  align-items: center
-  justify-content: flex-start
-  width: 405px
-  min-height: 440px
-  z-index: 1
-  &__tabs
-    display: flex
-    align-items: center
-    justify-content: center
-    gap: 6px
-    margin-bottom: 20px
-    &-item
-      display: flex
-      justify-content: center
-      align-items: center
-      font-size: 16px
-      &.active
-        background-color: $magenta
-      &:hover
-        background: $magenta
-      span
-        font-family: inherit
-        margin-right: .3em
-
-  &__body
-    width: 100%
-    display: flex
-    flex-direction: column
-    align-items: center
-  &__row
-    display: flex
-    width: 100%
-    align-items: center
-    position: relative
-    &.you
-      background: $white
-      .table__row-item
-        color: $blue
-      .you
-        //font-family: $font-favbet-text-reg
-        text-transform: uppercase
-        margin-left: 5px
-    &-item
-      display: flex
-      align-items: center
-      justify-content: center
-      color: $white
-      //font-family: $font-suisse-intl-reg
-      font-size: 12px
-    &.place1, &.place2, &.place3
-      .you
-        position: absolute
-        left: -7px
-        top: 50%
-        transform: translate(-100%, -50%)
-        color: white
-      .table__row-item
-        &:nth-child(1)
-          &::after
-            content: ""
-            display: block
-            width: 20px
-            height: 22px
-            margin-left: 5px
-    &.place1
-      .table__row-item
-        &:nth-child(1)
-          &::after
-            background: url("../img/results/gold.png") no-repeat 0 0/contain
-    &.place2
-      .table__row-item
-        &:nth-child(1)
-          &::after
-            background: url("../img/results/silver.png") no-repeat 0 0/contain
-    &.place3
-      .table__row-item
-        &:nth-child(1)
-          &::after
-            background: url("../img/results/bronze.png") no-repeat 0 0/contain
-  &__head
-    width: 100%
-    display: flex
-    align-items: center
-
-
-.drop
-  max-width: 605px
-  width: 100%
-  margin: 0 auto
-  border-radius: 10px
-  position: relative
-  z-index: 5
-  &__bottom-text
-    color: $white
-    font-size: 10px
-    line-height: 16px
-    //font-family: $font-suisse-intl-reg
-    text-align: center
-    margin-bottom: 15px
-  .dropdown[open] summary::before
-    transform:  rotate(180deg)
-  summary
-    list-style: none
-    padding: 8px 15px
-    //font-family: $font-suisse-intl-reg
-    font-size: 14px
-    cursor: pointer
-    background-size: 100% 100%
-    display: flex
-    align-items: center
-    justify-content: space-between
-    color: $white
-    @media screen and (max-width: 600px)
-      font-size: 14px
-      line-height: 22px
-    &::before
-      content: ""
-      display: block
-      min-width: 20px
-      height: 12px
-      //background: url("../img/arrow-drop.png") no-repeat 0 0/contain
-      order: 2
-
-  &-txt
-    padding: 15px
-    margin-top: 10px
-    max-height: 350px
-    overflow-y: auto
-    border: 1px solid $white
-    scrollbar-width: auto
-    &::-webkit-scrollbar-thumb
-      background: $green
-      width: 3px
-      border-radius: 3px
-    &::-webkit-scrollbar
-      background: $white
-      width: 3px
-    &-list
-      display: flex
-      flex-direction: column
-      gap: 15px
-      table
-        border-spacing: 0
-        border-color: $white
-        tr, td
-          border-color: $white
-          color: $white
-          //font-family: $font-suisse-intl-reg
-
-        td
-          border: none
-          border-right: 1px solid $white
-          padding: 0 5px
-        th
-          padding: 0 5px
-      p, strong, a
-        font-size: 14px
-        line-height: 22px
-        //font-family: $font-suisse-intl-reg
-        color: $white
-      span
-        //font-family: $font-suisse-intl-reg
-        display: block
-      tr,td
-        //font-family: $font-suisse-intl-reg
-      td
-        padding-left: 5px
-
-//content styles
-.drop
   .magenta
     font-family: inherit
     color: $magenta
 .retreat1
   padding-left: 20px
   strong
-    font-family: $font-suisse-intl-bold
+    font-family: $font-exo2-semibold
     color: $white
   p
     &:not(:last-child)
@@ -236,7 +386,7 @@ body
 .retreat2
   padding-left: 40px
   strong
-    font-family: $font-suisse-intl-bold
+    font-family: $font-exo2-semibold
     color: $white
   p
     &:not(:last-child)
@@ -260,21 +410,3 @@ body
     padding-left: 15px
   .retreat2
     padding-left: 30px
-
-//end contents styles
-
-body.dark
-  .spinner-overlay
-    background: $black
-
-@keyframes rotate
-  0%
-    transform: rotate(0deg)
-  100%
-    transform: rotate(360deg)
-
-@keyframes scale
-  0%
-    transform: scale(.8)
-  100%
-    transform: scale(1)

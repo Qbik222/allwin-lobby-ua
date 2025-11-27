@@ -1,55 +1,163 @@
-@media screen and (max-width: 1050px)
-  ._title
-    font-size: 20px
-    line-height: 20px
-  ._container
-    max-width: 725px
-    min-width: 725px
-  .bet
-    &__text
-      font-size: 11px
+@media screen and (max-width: 1400px)
+  .btn
+    font-size: 14px
+    padding: 12px 16px
+  .welcome
+    flex-direction: column-reverse
+    align-items: center
+    padding-top: 70px
     &__title
-      padding: 2px 0 2px 7px
-    &__btn
-      &-item
-        font-size: 11px
-    &__column
-      max-width: 350px
-      &-name
-        margin-left: 4px
+      z-index: 2
+      margin-top: 20px
+      &-top
+        font-size: 48px
+        line-height: 48px
+      &-bottom
+        font-size: 39px
+        line-height: 39px
+    &__info
+      &-cup
+        max-width: 171px
+        top: auto
+        bottom: 20px
+        left: 20px
+      &-card
+        max-width: 85px
+        top: 0
+        left: 20px
+      &-ball
+        max-width: 136px
+        right: 10px
+        bottom: 30px
+      &-ball-top
+        max-width: 97px
+        top: -125px
+        right: -110px
+      &-cube
+        max-width: 130px
+        top: -170px
+        left: -80px
+    &__bonus
+      width: 200px
+      height: 270px
+      &-text
+        font-size: 24px
+        margin-top: 5px
+      &-amount
+        border-right: 7px
+        margin-top: 10px
         &-item
           &:nth-child(1)
-            font-size: 12px
+            font-size: 22px
           &:nth-child(2)
-            font-size: 10px
-      &-btn
-        font-size: 12px
-        padding: 4px
-        &::before
-          bottom: -14px
-          left: -9px
-      &-you
-        margin-right: 25px
-        font-size: 12px
-  .results
-    &__subtitle
-      max-width: 335px
-    &__top
-      scale: .85
-      transform-origin: bottom right
-      right: 10px
-      top: 20px
-    &__you
-      max-height: 50px
-      &-pers
-        max-width: 85px
-        margin: 0 2px -3px 10px
-    &__popup
+            font-size: 28px
+    &__bottom
+      font-size: 27px
+      margin-top: 10px
+      &::before
+        width: 21px
+        height: 21px
+  .info
+    max-width: 768px
+    min-width: 768px
+    flex-direction: column
+    align-items: center
+    padding:  60px 10px 0 10px
+    gap: 30px
+    &__item
+      min-width: 710px
+      max-width: 710px
+      height: 240px
+      padding: 0 0 0 40px
+      &-left
+        width: 295px
+        padding-top: 40px
+      &-title
+        font-size: 32px
+        line-height: 37px
       &-text
-        font-size: 11px
-    &__prize
-      padding: 10px 17px 5px 0
-      &-amount
+        font-size: 15px
+
+      &:nth-child(1)
+        .info__item-right
+          transform: rotate(-15deg) translate(-30px, 0)
+        .info__img
+          &-left
+            left: 125px
+            transform: rotate(12.858deg)
+            max-width: 67px
+          &-center
+            max-width: 217px
+            transform: rotate(10deg)
+            right: 0
+            bottom: 12px
+            top: auto
+            left: auto
+          &-right
+            max-width: 97px
+            transform: rotate(21.916deg)
+            bottom: 40px
+            left: 38px
+      &:nth-child(2)
+        flex-direction: row-reverse
+        justify-content: flex-end
+        .info__item-right
+          transform: rotate(-15deg)
+          min-width: 290px
+          max-width: 290px
+        .info__img
+          &-left
+            left: 185px
+            top: 30px
+            transform: rotate(90deg)
+            max-width: 75px
+          &-center
+            max-width: 160px
+            transform: scale(-1, 1)
+            right: auto
+            left: 0
+            bottom: 60px
+            top: auto
+          &-right
+            max-width: 93px
+            transform: rotate(27.916deg)
+            bottom: 0px
+            left: 120px
+      &-right
+        min-width: 360px
+        max-width: 360px
+        height: 230px
+
+@media screen and (max-width: 1200px)
+  .seo
+    flex-direction: column-reverse
+    justify-content: center
+    max-width: 710px
+    min-width: 95%
+    padding: 50px 10px 20px 10px
+    &__left, &__right
+      min-width: auto
+      max-width: 100%
+      width: 100%
+
+@media screen and (max-width: 1050px)
+  .cards
+    max-width: 770px
+    &__item
+      width: 180px
+      height: 114px
+      &-icon
+        max-width: 32px
+      &-text
         font-size: 20px
-      &-font
-        font-size: 17px
+
+@media screen and (max-width: 730px)
+  .welcome
+    &__info
+      &-center
+        width: 270px
+  .info
+    gap: 10px
+    &__item
+      transform-origin: top center
+      transform: scale(.9)

@@ -1,87 +1,111 @@
 
-.fav-page.loading
-    .spinner-overlay
-        .spinner
-    .table
-        .table__tabs
-            .table__tabs-item.active(data-week="1") #[span(data-translate="tableTab") Faza] 1
-            .table__tabs-item(data-week="2") #[span(data-translate="tableTab") Faza] 2
-        .table__head
-            .table__row
-                .table__row-item(data-translate="tablePlace") [ MJESTO ]
-                .table__row-item(data-translate="tableId") [ ID ]
-                .table__row-item(data-translate="tablePoints") [ BODOVI ]
-                .table__row-item(data-translate="tablePrize") [ NAGRADA ]
-        .table__body#table
-            .table__row.place1.you
-                .table__row-item 01 #[span.you(data-translate="you") ti]
-                .table__row-item 4538***
-                .table__row-item 32.9
-                .table__row-item 350 € #[span.table-coin]
-            .table__row.palce2
-                .table__row-item 02
-                .table__row-item 4538***
-                .table__row-item 32.9
-                .table__row-item 350 € #[span.table-coin]
-            .table__row.palce3
-                .table__row-item 03
-                .table__row-item 4538***
-                .table__row-item 32.9
-                .table__row-item 350 € #[span.table-coin]
-            .table__row
-                .table__row-item 04
-                .table__row-item 4538***
-                .table__row-item 32.9
-                .table__row-item 350 € #[span.table-coin]
-            .table__row
-                .table__row-item 05
-                .table__row-item 4538***
-                .table__row-item 32.9
-                .table__row-item 350 € #[span.table-coin]
-            .table__row
-                .table__row-item 06
-                .table__row-item 4538***
-                .table__row-item 32.9
-                .table__row-item 350 € #[span.table-coin]
-            .table__row
-                .table__row-item 07
-                .table__row-item 4538***
-                .table__row-item 32.9
-                .table__row-item 350 € #[span.table-coin]
-            .table__row
-                .table__row-item 08
-                .table__row-item 4538***
-                .table__row-item 32.9
-                .table__row-item 350 € #[span.table-coin]
-            .table__row
-                .table__row-item 09
-                .table__row-item 4538***
-                .table__row-item 32.9
-                .table__row-item 350 € #[span.table-coin]
-            .table__row
-                .table__row-item 10
-                .table__row-item 4538***
-                .table__row-item 32.9
-                .table__row-item 350 € #[span.table-coin]
-        .table__body#tableOther
-            .table__row
-                .table__row-item 38
-                .table__row-item 4538***
-                .table__row-item 32.9
-                .table__row-item 350 € #[span.table-coin]
-            .table__row.you
-                .table__row-item 39 #[span.you(data-translate="you") ti]
-                .table__row-item 4538***
-                .table__row-item 32.9
-                .table__row-item 350 € #[span.table-coin]
-            .table__row
-                .table__row-item 40
-                .table__row-item 4538***
-                .table__row-item 32.9
-                .table__row-item 350 € #[span.table-coin]
-
-    .drop
-        details.dropdown
-            summary(data-translate="rulseBtn")
-            .drop-txt
-                .drop-txt-list(data-translate="rules")
+.allwin-page
+    .welcome
+        .welcome__title
+            .welcome__title-top вітальний бонус
+            .welcome__title-bottom на перші 5 депозитів
+            a.welcome__btn.btn(href="/personal-office/balance/deposit/") Забрати бонус
+        .welcome__info
+            .welcome__info-left
+                .welcome__bonus
+                    .welcome__bonus-img
+                        img(src="img/welcome/cubes.png" alt="Allwin")
+                    .welcome__bonus-text БОНУС КАЗИНО
+                    .welcome__bonus-amount
+                        .welcome__bonus-amount-item до
+                        .welcome__bonus-amount-item 215 000 ₴
+                    .welcome__bottom 600 FS
+            .welcome__info-center
+                .welcome__info-cup
+                    img(src="img/welcome/cup.png" alt="Allwin")
+                .welcome__info-card
+                    img(src="img/welcome/card.png" alt="Allwin")
+                .welcome__info-ball
+                    img(src="img/welcome/ball.png" alt="Allwin")
+                .welcome__info-cube
+                    img(src="img/welcome/cube-top.png" alt="Allwin")
+                .welcome__info-ball-top
+                    img(src="img/welcome/ball-top.png" alt="Allwin")
+            .welcome__info-right
+                .welcome__bonus
+                    .welcome__bonus-img
+                        img(src="img/welcome/gloves.png" alt="Allwin")
+                    .welcome__bonus-text БОНУС СПОРТ
+                    .welcome__bonus-amount
+                        .welcome__bonus-amount-item до
+                        .welcome__bonus-amount-item 225 000 ₴
+    .cards
+        a.cards__item(href="/uk/casino/")
+            .cards__item-icon
+                img(src="img/cards/machine.png" alt="Allwin")
+            .cards__item-text Казино
+        a.cards__item(href="/uk/live-casino/")
+            .cards__item-icon
+                img(src="img/cards/live-casino.png" alt="Allwin")
+            .cards__item-text Казино Live
+        a.cards__item(href="/uk/sports/sport/soccer/")
+            .cards__item-icon
+                img(src="img/cards/sport.png" alt="Allwin")
+            .cards__item-text Спорт
+        a.cards__item(href="/uk/live/all/")
+            .cards__item-icon
+                img(src="img/cards/live.png" alt="Allwin")
+            .cards__item-text Live
+        a.cards__item(href="/uk/e-sports/all/")
+            .cards__item-icon
+                img(src="img/cards/cyber.png" alt="Allwin")
+            .cards__item-text Кібер
+        a.cards__item(href="/uk/promos/promotions/all/")
+            .cards__item-icon
+                img(src="img/cards/bonuses.png" alt="Allwin")
+            .cards__item-text Бонуси
+    .info
+        .info__item
+            .info__item-left
+                .info__item-title Казино
+                .info__item-text Слоти та лайв-ігри на будь-який смак. Акції та персональні бонуси на постійній основі. Закрути ALLWIN вже зараз!
+                a.info__btn.btn(href="/casino/") крути слоти
+            .info__item-right
+                .info__img-left
+                    img(src="img/info/card1-left.png" alt="Allwin")
+                .info__img-center
+                    img(src="img/info/card1-center.png" alt="Allwin")
+                .info__img-right
+                    img(src="img/info/card1-right.png" alt="Allwin")
+        .info__item
+            .info__item-left
+                .info__item-title Спорт
+                .info__item-text 70+ спортів, підвищені коефи на топи, щоденні акції, бонуси та турніри. Тут починається твій шлях до ALLWIN
+                a.info__btn.btn(href="/sports/sport/soccer/") роби ставки
+            .info__item-right
+                .info__img-left
+                    img(src="img/info/card2-left.png" alt="Allwin")
+                .info__img-center
+                    img(src="img/info/card2-center.png" alt="Allwin")
+                .info__img-right
+                    img(src="img/info/card2-right.png" alt="Allwin")
+    .seo
+        .seo__left
+            h2.seo__left-title Sport bets in bookmaker FavBet
+            p.seo__left-text Betting on sports online securely with Favbet Sportsbook. With us, over 600,000 betting enthusiasts have trusted our sports betting company since 1999. We offer high odds, a large number of sports and betting options, more than 23,000 live events monthly, live sports events. A user-friendly interface, a mobile version of the site and an application for smartphones make the process a pleasure. Forecasts, reviews, mailing lists help our clients get up-to-date information about their favorite players and teams. Win with Favbet!
+            h2.seo__left-title Sport bets in bookmaker FavBet
+            p.seo__left-text Betting on sports online securely with Favbet Sportsbook. With us, over 600,000 betting enthusiasts have trusted our sports betting company since 1999. We offer high odds, a large number of sports and betting options, more than 23,000 live events monthly, live sports events. A user-friendly interface, a mobile version of the site and an application for smartphones make the process a pleasure. Forecasts, reviews, mailing lists help our clients get up-to-date information about their favorite players and teams. Win with Favbet!
+        .seo__right
+            .seo__right-row
+                .seo__right-label Офіційний сайт:
+                .seo__right-value Favbet
+            .seo__right-row
+                .seo__right-label Бонуси:
+                .seo__right-value 500₴ risk free bet + 4000₴ first deposit
+            .seo__right-row
+                .seo__right-label Мобільний додаток:
+                .seo__right-value Доступний для Android та IOS
+            .seo__right-row
+                .seo__right-label Тех.підтримка:
+                .seo__right-value 24/7
+            .seo__right-row
+                .seo__right-label Мовні версії:
+                .seo__right-value Українська, Англійська, Російська
+            .seo__right-row
+                .seo__right-label Типи платіжних систем:
+                .seo__right-value Visa/Mastercard, Skrill, Ecopayz, Wallet One, Netteler, Bpay
