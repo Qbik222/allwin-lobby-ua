@@ -332,6 +332,24 @@ body
       font-family: $font-exo2-regular
       color: $white
       font-size: 14px
+    .table
+      width: 100%
+      margin-top: 10px
+      border-collapse: collapse
+      border: 1px solid rgba(255, 255, 255, 0.2)
+      th, td
+        padding: 8px 12px
+        font-family: $font-exo2-regular
+        color: $white
+        font-size: 14px
+        border: 1px solid rgba(255, 255, 255, 0.2)
+        text-align: left
+      th
+        font-family: $font-exo2-semibold
+        background: rgba(255, 255, 255, 0.05)
+      tr
+        &:nth-child(even)
+          background: rgba(255, 255, 255, 0.02)
 
   &__right
     max-width: 580px
